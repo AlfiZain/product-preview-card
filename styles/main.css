@@ -1,0 +1,153 @@
+:root {
+  /* Primary */
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Very-dark-cyan: hsl(158, 36%, 17%);
+  --Cream: hsl(30, 38%, 92%);
+
+  /* Neutral */
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  color: var(--Dark-grayish-blue);
+}
+
+body {
+  background-color: var(--Cream);
+}
+
+.container {
+  max-width: 800px;
+  padding: 2em;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  background-color: var(--White);
+  border-radius: 10px;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.card-content {
+  padding-inline: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1em;
+}
+
+.category {
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  font-size: 0.8em;
+  font-weight: 500;
+}
+
+.title {
+  font-family: "Fraunces", serif;
+  color: var(--Very-dark-blue);
+  font-size: 2em;
+}
+
+.description {
+  line-height: 1.5em;
+  font-size: 0.95em;
+}
+
+.price {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+.price .discounted-price {
+  font-family: "Fraunces", serif;
+  font-size: 2em;
+  color: var(--Dark-cyan);
+  font-weight: 700;
+}
+
+.price .origin-price {
+  text-decoration: line-through;
+}
+
+.cta-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Dark-cyan);
+  border: 0;
+  padding: 1em;
+  color: var(--White);
+  border-radius: 15px;
+  margin-block-end: 1rem;
+  font-weight: 700;
+}
+
+.cta-btn:hover {
+  cursor: pointer;
+  background-color: var(--Very-dark-cyan);
+}
+
+.cta-btn:focus {
+  outline: 2px solid var(--Very-dark-blue);
+  outline-offset: -1px;
+}
+
+.cta-btn img {
+  margin-inline-end: 1em;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width: 600px) {
+  .container {
+    margin: 0 auto;
+    padding: 4em;
+  }
+
+  .card {
+    gap: 0;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card-content {
+    padding-block: 1.5em;
+    padding-inline: 2em;
+  }
+
+  .card-image {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
